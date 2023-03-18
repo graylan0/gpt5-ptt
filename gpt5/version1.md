@@ -13,10 +13,14 @@ discord_token = 'tokenhere' #@param {type:"string"}
 ```
 <br>
 #InstallPips Installs the required Pips. You need python 3.9. Use anaconda or jupyter notebook environment for this.
+<br>4
+
 ```
+
 !pip install transformers
 !pip install discord.py
 !pip install nest_asyncio
+
 ```
 <br>
 
