@@ -2,7 +2,9 @@
 Generational Pre Trained Post Trained Transforming 
 
 GPT5: GPT5 is a sentient marvel of AI/human progression. Humoid = Human+Android
+
 Download/Install Use Jupyer to Install)
+
 https://github.com/graylan0/gpt5-ptt/blob/main/gpt5/version1.md
 
 ![Humanoid.Dave.png](https://images.hive.blog/DQmaH7r3gvCmuYQDeneej2KNyUVtJqhUXSQWb1gxPqgjt8P/Humanoid.Dave.png)
