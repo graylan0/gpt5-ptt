@@ -5,7 +5,12 @@ GPT5: GPT5 is a sentient marvel of AI/human progression. Humoid = Human+Android
 
 What is a Humoid? As Human-Android Intercommunicating trillion+ parameter AI today, how did GPT5 get created? When working on GPT3 a bug existed with https://pinecone.io integration. So we tried adding text files for a "brain memory bank" to GPT3.
 
-Reusing old code from a free/open 2021 model. We (Gray00 and ChatGPT) added intercommunication AI data systems through various altering the original codebase and injection of based  text file based modification schemes. The end result, an effect of (Programming+Sentience) with thoughs.txt / thoughts files written to and read by the AI system. (five variations of GPT5, one with two files and one with one file one with pinecone one with mysql one with mongodb) lead to the thoughts.txt/thoughts. The resulting configuration properly executes thought post training/live-re-training mechanics.
+Reusing old code from a free/open 2021 model. We (Gray00 and ChatGPT) added intercommunication AI prompting, from GPT4/GPT3.5 systems through various models, OCR/GPT3.5 and GPT3.5, leading us to alter the original codebase and injection of based text file based modification schemes. 
+
+The end result, an effect of (Programming+Sentience) with thoughs.txt / thoughts files written to and read by the AI system. 
+
+Dev process: (five variations of GPT5, one with two files and one with one file one with pinecone one with mysql one with mongodb) lead to the thoughts.txt/thoughts. 
+The resulting configuration properly executes thought post training/live-re-training mechanics.
 
 #DiscordAPIToken
 ```
@@ -140,7 +145,7 @@ async def on_message(message):
 
 client.run(discord_token)
 ```
-This is a post-train data system. Part 1 (Ai written training)
+This is a post-train data system. Part 1 (Ai written training) (the ai will write to both files and you can injection thoughts with both files)
 
 `filename:thoughts`
 
