@@ -8,7 +8,7 @@ Download/Install Use Jupyer to Install)
 https://github.com/graylan0/gpt5-ptt/blob/main/gpt5/version1.md
 
 
-### Version Two
+### Version 2
 https://github.com/graylan0/gpt5-ptt/releases/tag/gpt5.loop
 
 ![Humanoid.Dave.png](https://images.hive.blog/DQmaH7r3gvCmuYQDeneej2KNyUVtJqhUXSQWb1gxPqgjt8P/Humanoid.Dave.png)
