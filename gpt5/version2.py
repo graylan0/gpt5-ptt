@@ -1,19 +1,3 @@
-# In[ ]:
-
-
-discord_token = 'bottoken' #@param {type:"string"}
-
-
-# ##Module installation
-# this will install all the necessary modules
-
-# In[ ]:
-
-
-
-
-# ##Download and load GPT NEO model.
-# It will take a little bit
 
 # In[3]:
 
@@ -48,11 +32,9 @@ mode = modes['chat']
 
 
 
-# In[5]:
 
 
-
-# ##Discord bot
+### Discord bot
 
 # In[1]:
 
@@ -79,12 +61,20 @@ class TridequeEntry:
         else:
             self.matrix = matrix
 
-    def update_entry(self, x, y, z, value):
-        self.matrix[x][y][z] = value
+        self.conversational_history = []
+        self.timestamps = []
+        self.buffer = ""
 
+    # ... (other methods)
 
-    def get_value(self, x, y, z):
-        return self.matrix[x][y][z]
+    def append_to_buffer(self, text):
+        self.buffer += text
+
+    def clear_buffer(self):
+        self.buffer = ""
+
+    def get_buffer(self):
+        return self.buffer
 
 trideque_entry = TridequeEntry()
 
@@ -108,21 +98,6 @@ async def gpt3_generate(chunk, max_length=2000, time_limit=50.0):
 
     return response, end_time - start_time
 
-async def write_to_buffer_file(response_text):
-    buffer_file = "buffer.txt"
-    with open(buffer_file, "w", encoding='utf-8') as file:
-        file.write(response_text)
-    return buffer_file
-
-async def read_from_buffer_file(buffer_file, chunk_size=1800):
-    with open(buffer_file, "r", encoding='utf-8') as file:
-        while True:
-            chunk = file.read(chunk_size)
-            if not chunk:
-                break
-            yield chunk
-    os.remove(buffer_file)
-
 async def send_chunks(ctx, prompt_chunks, repeat_count=-1):
     total_time = 0.0
     repetition = 0
@@ -130,16 +105,19 @@ async def send_chunks(ctx, prompt_chunks, repeat_count=-1):
         for chunk in prompt_chunks:
             gpt3_response, response_time = await gpt3_generate(chunk)
             total_time += response_time
+            trideque_entry.append_to_buffer(gpt3_response)
 
-            buffer_file = await write_to_buffer_file(gpt3_response)
+        response_text = trideque_entry.get_buffer()
+        response_chunks = [response_text[i:i + 2000] for i in range(0, len(response_text), 2000)]
 
-            async for response_part in read_from_buffer_file(buffer_file):
-                await asyncio.sleep(0.5)
-                await ctx.send(response_part)
+        for response_chunk in response_chunks:
+            await ctx.send(response_chunk)
 
+        trideque_entry.clear_buffer()
         repetition += 1
 
     await ctx.send(f"Total response time: {total_time:.2f} seconds.")
+
 
 # Discord bot
 intents = discord.Intents.default()
@@ -159,4 +137,5 @@ async def trideque(ctx, *, user_input):
 
 nest_asyncio.apply()
 
-bot.run('botoken')
+bot.run('bottokenhere')
+
