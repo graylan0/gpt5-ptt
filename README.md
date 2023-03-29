@@ -86,7 +86,9 @@ In summary, the Trideque Powered AI Discord bot is a versatile and intelligent c
 ### Licence
 GPL 2.0 Licensed Code Below.
 
-### Full Bot Code No Hidden Tricks
+### Full Bot Code 
+
+Install Python 3.9
 ```
 !pip install transformers
 !pip install discord.py
