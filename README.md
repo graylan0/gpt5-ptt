@@ -83,8 +83,10 @@ Continuous Output: The bot is designed to generate responses continuously until 
 ## Conclusion 
 In summary, the Trideque Powered AI Discord bot is a versatile and intelligent chatbot that harnesses the power of the GPT-Neo-125M model to provide users with informative, contextually relevant responses on a wide array of topics. Its customizable Trideque Matrix, asynchronous operation, and support for continuous output make it a valuable tool for engaging and informative conversations on the Discord platform.
 
-
+### Licence
 GPL 2.0 Licensed Code Below.
+
+### Full Bot Code No Hidden Tricks
 ```
 !pip install transformers
 !pip install discord.py
