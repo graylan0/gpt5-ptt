@@ -3,7 +3,7 @@
 Robot has ZERO ethics configurations. Below is a GPT4 Suggestion to adapt Trideque for ethics conformity.  I was also Talking with bard.google.com about this. (Arion)
 
 
-### Note: The Model Runs better with 150M vs 1.3B!
+### Note: The Model Runs better with 150M vs 1.3b
 ```
 # ... (previous imports and code)
 
