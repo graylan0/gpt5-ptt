@@ -2,6 +2,19 @@
 
 Robot has ZERO ethics configurations. Below is a GPT4 Suggestion to adapt Trideque for ethics conformity.  I was also Talking with bard.google.com about this. (Arion)
 
+## Ethics Sample
+```
+# Define a function to classify a prompt as containing an ethical problem or not
+def classify_ethical_problem(prompt):
+    encoded_prompt = tokenizer.encode_plus(prompt, add_special_tokens=True, return_attention_mask=True, padding='max_length', max_length=128, truncation=True)
+    input_ids = torch.tensor([encoded_prompt['input_ids']])
+    attention_mask = torch.tensor([encoded_prompt['attention_mask']])
+    with torch.no_grad():
+        outputs = model(input_ids, attention_mask=attention_mask)
+    logits = outputs[0].detach().cpu().numpy()[0]
+    predicted_label = int(logits.argmax())
+    return predicted_label
+```
 
 ### Note: The Model Runs better with 150M vs 1.3b
 ```
