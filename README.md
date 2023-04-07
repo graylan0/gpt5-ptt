@@ -14,7 +14,7 @@ to
 
 `async def send_chunks(ctx, prompt_chunks, repeat_count=10):` 
 
-Changes the bot to a DCL10 (determine loop count 10)
+Changes the bot to a DCL10 (determine loop count 10) You may want to determine loop count further with other measures. (interesting)
 
 ## Ethics Sample
 ```
