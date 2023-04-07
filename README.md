@@ -1,6 +1,19 @@
 # Pretext: Warning 
-
+ 
 Robot has ZERO ethics configurations. Below is a GPT4 Suggestion to adapt Trideque for ethics conformity.  I was also Talking with bard.google.com about this. (Arion)
+
+# NOTE: To change the bot from a loop bot to a determined count loop (DCL) you need to modify this line . `async def send_chunks(ctx, prompt_chunks, repeat_count=-1):` from infinate loop to DCL. like this.
+
+from
+
+`async def send_chunks(ctx, prompt_chunks, repeat_count=-1):`
+
+
+to
+
+`async def send_chunks(ctx, prompt_chunks, repeat_count=10):` 
+
+Changes the bot to a DCL10 (determine loop count 10)
 
 ## Ethics Sample
 ```
